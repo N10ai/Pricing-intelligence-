@@ -1,89 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f6f6f3">
 <title>Pricing Intelligence</title>
 <style>
-:root{--bg:#f5f7fa;--panel:#fff;--text:#172033;--muted:#6e7787;--line:#e5e9f0;--navy:#0f2340;--blue:#2f6fed;--blue2:#edf3ff;--green:#15803d;--green2:#eaf8ef;--amber:#a16207;--amber2:#fff7df;--red:#b42318;--red2:#fff0ee;--shadow:0 8px 30px rgba(16,32,64,.07)}*{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text)}button,input,select,textarea{font:inherit}.app{min-height:100vh;display:grid;grid-template-columns:230px 1fr}.sidebar{background:var(--navy);color:white;padding:22px 16px;display:flex;flex-direction:column}.brand{font-weight:800;font-size:18px;line-height:1.1;padding:4px 8px 26px}.brand small{display:block;color:#91a3bd;font-size:10px;letter-spacing:.15em;text-transform:uppercase;margin-top:6px}.nav{display:grid;gap:5px}.nav button{border:0;background:transparent;color:#acbad0;text-align:left;padding:11px 12px;border-radius:9px;cursor:pointer}.nav button.active,.nav button:hover{background:#1a3356;color:#fff}.sidebar-foot{margin-top:auto;padding:16px 8px;color:#91a3bd;font-size:12px}.main{padding:24px 28px}.topbar{display:flex;justify-content:space-between;gap:18px;align-items:center;margin-bottom:22px}.topbar h1{margin:0;font-size:24px}.topbar p{margin:4px 0 0;color:var(--muted);font-size:13px}.btn{border:1px solid var(--line);background:#fff;color:var(--text);padding:9px 13px;border-radius:9px;cursor:pointer;font-weight:650}.btn.primary{border-color:var(--blue);background:var(--blue);color:#fff}.btn.success{border-color:var(--green);background:var(--green);color:#fff}.btn.danger{border-color:#f0c8c4;color:var(--red);background:#fff}.btn.sm{padding:7px 10px;font-size:12px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:18px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:17px;box-shadow:var(--shadow)}.metric-label{font-size:12px;color:var(--muted);font-weight:600}.metric-value{font-size:27px;font-weight:800;margin-top:6px}.metric-sub{font-size:11px;color:var(--muted);margin-top:4px}.layout{display:grid;grid-template-columns:minmax(360px,.9fr) minmax(520px,1.35fr);gap:18px}.panel{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}.panel-head{padding:15px 17px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px}.panel-head h2{font-size:14px;margin:0}.panel-body{padding:16px}.rfq-list{display:grid}.rfq-item{padding:14px 16px;border-bottom:1px solid var(--line);cursor:pointer}.rfq-item:hover,.rfq-item.active{background:#f8fbff}.rfq-row{display:flex;justify-content:space-between;gap:10px}.customer{font-weight:760}.route{font-size:13px;margin-top:5px}.meta{font-size:11px;color:var(--muted);margin-top:6px}.badge{display:inline-block;padding:4px 7px;border-radius:999px;font-size:10px;font-weight:750}.b-new{background:var(--blue2);color:var(--blue)}.b-missing{background:var(--amber2);color:var(--amber)}.b-ready{background:var(--green2);color:var(--green)}.b-sent{background:#f1efff;color:#6246ba}.b-won{background:var(--green2);color:var(--green)}.b-lost{background:var(--red2);color:var(--red)}.section{padding:3px 0 16px;border-bottom:1px solid var(--line);margin-bottom:16px}.section:last-child{border-bottom:0;margin-bottom:0}.section-title{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:800;margin-bottom:11px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.field label{display:block;font-size:10px;color:var(--muted);font-weight:700;margin:0 0 5px}.field input,.field select,.field textarea{width:100%;border:1px solid #dbe1ea;border-radius:8px;padding:9px 10px;background:#fff;color:var(--text)}.field textarea{resize:vertical;min-height:72px}.email-box{border:1px solid var(--line);background:#fafbfc;border-radius:10px;padding:12px;font-size:12px;line-height:1.55;color:#364152;white-space:pre-line}.missing{background:var(--amber2);border:1px solid #f3df9b;color:#76520a;padding:10px 12px;border-radius:9px;font-size:12px;margin-top:10px}.pricing-table{width:100%;border-collapse:collapse;font-size:12px}.pricing-table th{text-align:left;color:var(--muted);font-size:10px;text-transform:uppercase;border-bottom:1px solid var(--line);padding:7px}.pricing-table td{border-bottom:1px solid var(--line);padding:9px 7px}.recommend{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;background:#f7faff;border:1px solid #dce8ff;border-radius:10px;padding:12px;margin-top:12px}.recommend strong{font-size:15px;display:block}.recommend span{font-size:9px;text-transform:uppercase;color:var(--muted);font-weight:700}.actions{display:flex;gap:8px;flex-wrap:wrap}.empty{padding:40px;text-align:center;color:var(--muted)}.view{display:none}.view.active{display:block}.pipeline{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.lane{background:#eef1f5;border-radius:12px;padding:10px;min-height:340px}.lane h3{font-size:12px;margin:3px 4px 10px;color:#536070}.opp{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px;margin-bottom:8px}.opp strong{font-size:12px}.opp .amount{font-size:18px;font-weight:800;margin:10px 0 3px}.search{border:1px solid var(--line);padding:9px 11px;border-radius:9px;min-width:220px}@media(max-width:1050px){.app{grid-template-columns:76px 1fr}.brand{font-size:0;padding-left:4px}.brand:before{content:'PI';font-size:20px}.brand small{display:none}.nav button{font-size:0;text-align:center}.nav button:before{font-size:14px}.nav button[data-view="dashboard"]:before{content:'⌂'}.nav button[data-view="pipeline"]:before{content:'▦'}.nav button[data-view="rates"]:before{content:'$'}.layout{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}}@media(max-width:650px){.main{padding:16px}.app{display:block}.sidebar{position:sticky;top:0;z-index:9;height:auto;flex-direction:row;align-items:center;padding:9px 12px}.brand{padding:0 15px 0 0}.nav{display:flex}.nav button{padding:8px 13px}.sidebar-foot{display:none}.cards{grid-template-columns:1fr 1fr}.topbar{align-items:flex-start}.topbar .actions{justify-content:flex-end}.grid3,.recommend,.pipeline{grid-template-columns:1fr 1fr}.search{display:none}}
+:root{--bg:#f6f6f3;--surface:rgba(255,255,255,.78);--ink:#111214;--muted:#777a80;--line:rgba(17,18,20,.08);--blue:#1677ff;--green:#1b8f5a;--amber:#b77709;--shadow:0 24px 80px rgba(20,24,32,.08);--radius:30px}*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter","Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}button,textarea,input{font:inherit}.shell{min-height:100vh;padding:24px}.top{height:52px;max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.02em}.mark{width:28px;height:28px;border-radius:9px;background:#111;display:grid;place-items:center;color:white;font-size:13px}.top-actions{display:flex;gap:8px}.icon-btn{border:0;background:rgba(255,255,255,.7);box-shadow:inset 0 0 0 1px var(--line);width:40px;height:40px;border-radius:14px;cursor:pointer;color:#555}.stage{max-width:860px;margin:9vh auto 0}.eyebrow{text-align:center;color:var(--muted);font-size:13px;font-weight:650;letter-spacing:.01em}.hero{font-size:clamp(42px,6vw,72px);line-height:.98;letter-spacing:-.055em;text-align:center;margin:18px auto 20px;max-width:800px;font-weight:760}.sub{text-align:center;margin:0 auto 44px;color:var(--muted);font-size:18px;line-height:1.45;max-width:610px}.composer{background:var(--surface);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.9);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;transition:.3s ease}.composer:focus-within{transform:translateY(-2px);box-shadow:0 30px 90px rgba(20,24,32,.12)}textarea{width:100%;min-height:112px;resize:none;border:0;outline:0;background:transparent;color:var(--ink);font-size:21px;line-height:1.45;padding:8px 8px 16px}textarea::placeholder{color:#a0a2a7}.composer-foot{display:flex;align-items:center;justify-content:space-between;gap:12px}.tools{display:flex;gap:8px}.pill{border:0;background:#f1f1ee;color:#62656b;border-radius:999px;padding:10px 13px;font-weight:600;font-size:13px;cursor:pointer}.go{border:0;background:#111;color:white;width:46px;height:46px;border-radius:50%;cursor:pointer;font-size:22px;transition:.2s}.go:hover{transform:scale(1.04)}.hint{text-align:center;color:#a0a2a7;font-size:12px;margin-top:18px}.flow{display:none;max-width:860px;margin:5vh auto 80px}.flow.active{display:block}.progress{display:flex;justify-content:center;align-items:center;gap:8px;margin-bottom:28px}.dot{width:6px;height:6px;border-radius:50%;background:#d0d1d3}.dot.active{width:22px;border-radius:999px;background:#111}.card{background:rgba(255,255,255,.86);border:1px solid rgba(255,255,255,.95);box-shadow:var(--shadow);border-radius:34px;padding:34px}.tiny{font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.05em;text-transform:uppercase}.route{font-size:clamp(38px,6vw,62px);font-weight:760;letter-spacing:-.05em;margin:8px 0 10px}.summary{font-size:18px;color:#62656b;line-height:1.5}.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}.chip{background:#f4f4f1;border-radius:999px;padding:9px 12px;color:#45484d;font-size:13px;font-weight:600}.confidence{display:flex;align-items:center;gap:7px;color:var(--green);font-size:13px;font-weight:650;margin-top:24px}.actions{display:flex;justify-content:flex-end;gap:10px;margin-top:28px}.secondary,.primary{border:0;border-radius:16px;padding:14px 18px;font-weight:680;cursor:pointer}.secondary{background:#f0f0ed;color:#4b4e53}.primary{background:#111;color:#fff}.question{text-align:center;margin:6vh 0 24px}.question h2{font-size:clamp(34px,5vw,56px);letter-spacing:-.045em;margin:0 0 12px}.question p{color:var(--muted);font-size:17px}.answer{max-width:560px;margin:auto}.answer input{width:100%;border:0;outline:0;background:#fff;border-radius:22px;padding:20px 22px;font-size:20px;box-shadow:var(--shadow)}.center-actions{display:flex;justify-content:center;margin-top:16px}.pricing{text-align:center}.price-label{color:var(--muted);font-size:13px;font-weight:650}.price{font-size:clamp(60px,10vw,104px);letter-spacing:-.07em;font-weight:760;margin:8px 0}.price-sub{font-size:17px;color:#666a70}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-radius:22px;overflow:hidden;margin-top:28px}.metric{background:#fafaf8;padding:20px}.metric span{display:block;color:var(--muted);font-size:12px}.metric strong{display:block;font-size:20px;margin-top:5px}.memory{margin-top:18px;padding:18px 20px;background:#f2f6ff;border-radius:20px;text-align:left;color:#395b8d;line-height:1.45;font-size:14px}.sent{text-align:center;padding:44px 20px}.check{width:72px;height:72px;border-radius:50%;background:#eaf7ef;color:var(--green);display:grid;place-items:center;margin:0 auto 20px;font-size:30px}.sent h2{font-size:46px;letter-spacing:-.045em;margin:0 0 10px}.sent p{color:var(--muted);font-size:17px}.quiet-link{display:inline-block;margin-top:22px;color:#555;text-decoration:none;font-weight:650;font-size:14px}.inbox-drawer{position:fixed;inset:0 0 0 auto;width:min(420px,92vw);background:#fbfbf8;box-shadow:-30px 0 100px rgba(0,0,0,.1);padding:24px;transform:translateX(105%);transition:.32s ease;z-index:20}.inbox-drawer.open{transform:none}.drawer-head{display:flex;justify-content:space-between;align-items:center}.drawer-head h2{letter-spacing:-.04em}.rfq{padding:18px 0;border-bottom:1px solid var(--line);cursor:pointer}.rfq strong{font-size:15px}.rfq-route{font-size:21px;font-weight:700;letter-spacing:-.03em;margin-top:4px}.rfq small{color:var(--muted)}.demo{margin-top:48px;text-align:center}.demo button{border:0;background:transparent;color:#8b8e93;text-decoration:underline;text-underline-offset:4px;cursor:pointer;font-size:13px}@media(max-width:640px){.shell{padding:15px}.stage{margin-top:8vh}.hero{font-size:46px}.sub{font-size:16px;margin-bottom:28px}.card{padding:24px;border-radius:26px}.metrics{grid-template-columns:1fr}.composer{border-radius:25px}textarea{font-size:18px;min-height:130px}.route{font-size:44px}.actions{flex-direction:column-reverse}.primary,.secondary{width:100%}.sent h2{font-size:38px}}
 </style>
 </head>
 <body>
-<div class="app">
-  <aside class="sidebar">
-    <div class="brand">Pricing Intelligence<small>Freight Revenue OS</small></div>
-    <nav class="nav">
-      <button class="active" data-view="dashboard">Pricing Inbox</button>
-      <button data-view="pipeline">Quote Pipeline</button>
-      <button data-view="rates">Rate Memory</button>
-    </nav>
-    <div class="sidebar-foot">MVP 0.1 · Revenue starts here.</div>
-  </aside>
-  <main class="main">
-    <section id="dashboard" class="view active">
-      <div class="topbar"><div><h1>Pricing Inbox</h1><p>RFQs become structured, profitable opportunities.</p></div><div class="actions"><input id="search" class="search" placeholder="Search customer or lane"><button class="btn primary" id="newRfq">+ New RFQ</button></div></div>
-      <div class="cards">
-        <div class="card"><div class="metric-label">RFQs this month</div><div class="metric-value" id="mRfq">0</div><div class="metric-sub">All pricing opportunities</div></div>
-        <div class="card"><div class="metric-label">Average response</div><div class="metric-value">11m</div><div class="metric-sub">Target under 15 minutes</div></div>
-        <div class="card"><div class="metric-label">Open pipeline</div><div class="metric-value" id="mPipe">$0</div><div class="metric-sub">Quoted + ready opportunities</div></div>
-        <div class="card"><div class="metric-label">Projected GP</div><div class="metric-value" id="mGp">$0</div><div class="metric-sub">Across open opportunities</div></div>
-      </div>
-      <div class="layout">
-        <div class="panel"><div class="panel-head"><h2>RFQ Queue</h2><span class="badge b-new" id="queueCount">0 active</span></div><div id="rfqList" class="rfq-list"></div></div>
-        <div class="panel"><div class="panel-head"><h2 id="workspaceTitle">Pricing Workspace</h2><span id="workspaceStatus" class="badge b-new">NEW</span></div><div id="workspace" class="panel-body"></div></div>
-      </div>
-    </section>
-    <section id="pipeline" class="view">
-      <div class="topbar"><div><h1>Quote Pipeline</h1><p>Know exactly where revenue is getting stuck.</p></div></div>
-      <div class="pipeline" id="pipelineBoard"></div>
-    </section>
-    <section id="rates" class="view">
-      <div class="topbar"><div><h1>Rate Memory</h1><p>Your company's pricing history becomes reusable intelligence.</p></div></div>
-      <div class="panel"><div class="panel-head"><h2>Historical lane intelligence</h2><button class="btn sm" id="addRate">+ Add rate</button></div><div class="panel-body"><table class="pricing-table"><thead><tr><th>Lane</th><th>Mode</th><th>Vendor</th><th>Buy</th><th>Last Sell</th><th>Typical Margin</th><th>Updated</th></tr></thead><tbody id="rateRows"></tbody></table></div></div>
-    </section>
-  </main>
+<div class="shell">
+<header class="top"><div class="brand"><div class="mark">PI</div><span>Pricing Intelligence</span></div><div class="top-actions"><button class="icon-btn" id="inboxBtn" aria-label="Open pricing inbox">☰</button></div></header>
+
+<main id="start" class="stage">
+<div class="eyebrow">Freight pricing, without the busywork.</div>
+<h1 class="hero">What do they need moved?</h1>
+<p class="sub">Drop the customer's message here. Pricing Intelligence will understand the shipment and guide the rest.</p>
+<div class="composer">
+<textarea id="rfqText" placeholder="Paste an email, message, or rate request…"></textarea>
+<div class="composer-foot"><div class="tools"><button class="pill" id="pasteDemo">Try an example</button><button class="pill">＋ Attachment</button></div><button class="go" id="analyzeBtn">↑</button></div>
 </div>
+<div class="hint">No forms. Review only what needs your attention.</div>
+</main>
+
+<main id="flow" class="flow">
+<div class="progress"><i class="dot active"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
+<section id="step1" class="step card">
+<div class="tiny">I found the shipment</div>
+<div class="route" id="route">MIA → LIM</div>
+<div class="summary" id="summary">3 pallets · 1,850 kg · Air freight · Ready tomorrow</div>
+<div class="chips" id="chips"></div>
+<div class="confidence">● Looks right · high confidence</div>
+<div class="actions"><button class="secondary" onclick="resetApp()">Not quite</button><button class="primary" onclick="nextStep(2)">Looks right →</button></div>
+</section>
+
+<section id="step2" class="step" hidden>
+<div class="question"><div class="tiny">One thing is missing</div><h2>What are the dimensions?</h2><p>I need them to calculate chargeable weight.</p></div>
+<div class="answer"><input id="dims" placeholder="e.g. 48 × 40 × 52 in each" autofocus><div class="center-actions"><button class="primary" onclick="nextStep(3)">Continue →</button></div></div>
+</section>
+
+<section id="step3" class="step card pricing" hidden>
+<div class="price-label">Recommended sell</div>
+<div class="price" id="sellPrice">$3,690</div>
+<div class="price-sub">Built from your rate memory and target margin.</div>
+<div class="metrics"><div class="metric"><span>BUY</span><strong>$2,880</strong></div><div class="metric"><span>PROJECTED GP</span><strong>$810</strong></div><div class="metric"><span>MARGIN</span><strong>22.0%</strong></div></div>
+<div class="memory">✦ You quoted this customer on a similar MIA → LIM movement at $1.98/kg. This recommendation keeps you within their historical range while protecting your margin.</div>
+<div class="actions"><button class="secondary" onclick="adjustPrice()">Adjust</button><button class="primary" onclick="nextStep(4)">Create quote →</button></div>
+</section>
+
+<section id="step4" class="step card" hidden>
+<div class="tiny">Ready to send</div>
+<div class="route" style="font-size:44px">Nova Lighting</div>
+<div class="summary">Air freight · Miami → Lima<br>3 pallets · 1,850 kg · <span id="finalDims">dimensions confirmed</span></div>
+<div class="pricing" style="margin-top:30px"><div class="price-label">CUSTOMER PRICE</div><div class="price" style="font-size:70px">$3,690</div></div>
+<div class="actions"><button class="secondary" onclick="nextStep(3)">Back</button><button class="primary" onclick="sendQuote()">Send quote ↑</button></div>
+</section>
+
+<section id="step5" class="step card sent" hidden>
+<div class="check">✓</div><h2>Quote sent.</h2><p>I'll keep an eye on the opportunity and surface the next action when the customer replies.</p><a class="quiet-link" href="#" onclick="resetApp();return false">Price another request</a>
+</section>
+</main>
+</div>
+
+<aside id="drawer" class="inbox-drawer"><div class="drawer-head"><h2>Pricing inbox</h2><button class="icon-btn" id="closeDrawer">×</button></div><div class="rfq"><strong>Nova Lighting</strong><div class="rfq-route">MIA → LIM</div><small>Needs dimensions · just now</small></div><div class="rfq"><strong>Acme Imports</strong><div class="rfq-route">MIA → UIO</div><small>Quote ready · 18 min ago</small></div><div class="rfq"><strong>RMG Trading</strong><div class="rfq-route">MIA → GYE</div><small>Waiting on customer · 1h ago</small></div></aside>
+
 <script>
-const seed=[
-{id:1047,customer:'Acme Imports',contact:'Maria',mode:'Air',origin:'MIA',destination:'UIO',pieces:4,packageType:'Pallets',weight:2200,dims:'48×40×58 in',commodity:'Auto parts',ready:'Monday',status:'ready',subject:'Rate request MIA - UIO',email:'Hi, please quote 4 pallets from Miami to Quito. 2,200 kg total, 48x40x58 each. Auto parts, ready Monday. Please advise best rate.',buy:2860,sell:3650,stage:'Ready',created:'Today 9:12 AM'},
-{id:1048,customer:'Nova Lighting',contact:'James',mode:'Air',origin:'MIA',destination:'LIM',pieces:3,packageType:'Pallets',weight:1850,dims:'',commodity:'Lighting fixtures',ready:'Tomorrow',status:'missing',subject:'Urgent quote to Lima',email:'Need rate MIA-LIM. 3 pallets / 1,850 kg. Pickup Doral, deliver airport Lima. Needs to move tomorrow.',buy:0,sell:0,stage:'New',created:'Today 10:04 AM'},
-{id:1049,customer:'RMG Trading',contact:'Ana',mode:'Ocean',origin:'Miami',destination:'Guayaquil',pieces:1,packageType:'40HC',weight:14800,dims:'FCL',commodity:'General cargo',ready:'Sep 3',status:'sent',subject:'40HC Guayaquil',email:'Please quote 1 x 40HC Miami to Guayaquil. General cargo, 14,800 kg, ready Sep 3.',buy:2180,sell:2950,stage:'Sent',created:'Today 11:31 AM'}
-];
-const rateSeed=[
-{lane:'MIA → UIO',mode:'Air',vendor:'Avianca',buy:'$1.30/kg',sell:'$1.66/kg',margin:'21.7%',updated:'Aug 28'},
-{lane:'MIA → LIM',mode:'Air',vendor:'LATAM',buy:'$1.28/kg',sell:'$1.62/kg',margin:'21.0%',updated:'Aug 27'},
-{lane:'Miami → Guayaquil',mode:'Ocean',vendor:'MSC',buy:'$2,180',sell:'$2,950',margin:'26.1%',updated:'Aug 29'}
-];
-let rfqs=JSON.parse(localStorage.getItem('pi_rfqs')||'null')||seed;
-let rates=JSON.parse(localStorage.getItem('pi_rates')||'null')||rateSeed;
-let selected=rfqs[0]?.id;
-function save(){localStorage.setItem('pi_rfqs',JSON.stringify(rfqs));localStorage.setItem('pi_rates',JSON.stringify(rates))}
-function money(n){return '$'+Number(n||0).toLocaleString(undefined,{maximumFractionDigits:0})}
-function badge(s){const map={new:'b-new',missing:'b-missing',ready:'b-ready',sent:'b-sent',won:'b-won',lost:'b-lost'};return map[s]||'b-new'}
-function renderList(filter=''){const el=document.getElementById('rfqList');const items=rfqs.filter(x=>(x.customer+' '+x.origin+' '+x.destination).toLowerCase().includes(filter.toLowerCase()));el.innerHTML=items.map(x=>`<div class="rfq-item ${x.id===selected?'active':''}" data-id="${x.id}"><div class="rfq-row"><span class="customer">${x.customer}</span><span class="badge ${badge(x.status)}">${x.status.toUpperCase()}</span></div><div class="route">${x.origin} → ${x.destination} · ${x.mode}</div><div class="meta">${x.pieces} ${x.packageType} · ${Number(x.weight).toLocaleString()} kg &nbsp;•&nbsp; ${x.created}</div></div>`).join('')||'<div class="empty">No RFQs found.</div>';el.querySelectorAll('.rfq-item').forEach(i=>i.onclick=()=>{selected=+i.dataset.id;renderAll()});}
-function renderWorkspace(){const x=rfqs.find(r=>r.id===selected);const w=document.getElementById('workspace');if(!x){w.innerHTML='<div class="empty">Select an RFQ.</div>';return}document.getElementById('workspaceTitle').textContent=`RFQ-${x.id} · ${x.customer}`;const st=document.getElementById('workspaceStatus');st.className='badge '+badge(x.status);st.textContent=x.status.toUpperCase();const missing=[];if(!x.dims)missing.push('Dimensions');if(!x.weight)missing.push('Weight');if(!x.origin)missing.push('Origin');if(!x.destination)missing.push('Destination');const gp=(x.sell||0)-(x.buy||0),margin=x.sell?gp/x.sell*100:0;w.innerHTML=`
-<div class="section"><div class="section-title">Original request</div><div class="email-box"><strong>${x.subject}</strong>\n${x.email}</div>${missing.length?`<div class="missing"><strong>Missing:</strong> ${missing.join(', ')}. Complete this before final pricing.</div>`:''}</div>
-<div class="section"><div class="section-title">Extracted shipment</div><div class="grid3">
-<div class="field"><label>MODE</label><select data-k="mode"><option ${x.mode==='Air'?'selected':''}>Air</option><option ${x.mode==='Ocean'?'selected':''}>Ocean</option><option ${x.mode==='Ground'?'selected':''}>Ground</option></select></div>
-<div class="field"><label>ORIGIN</label><input data-k="origin" value="${x.origin}"></div><div class="field"><label>DESTINATION</label><input data-k="destination" value="${x.destination}"></div>
-<div class="field"><label>PIECES</label><input data-k="pieces" type="number" value="${x.pieces}"></div><div class="field"><label>WEIGHT KG</label><input data-k="weight" type="number" value="${x.weight}"></div><div class="field"><label>DIMENSIONS</label><input data-k="dims" value="${x.dims}"></div>
-</div><div class="grid2" style="margin-top:10px"><div class="field"><label>COMMODITY</label><input data-k="commodity" value="${x.commodity}"></div><div class="field"><label>READY DATE</label><input data-k="ready" value="${x.ready}"></div></div></div>
-<div class="section"><div class="section-title">Pricing</div><table class="pricing-table"><thead><tr><th>Source</th><th>Buy cost</th><th>Sell</th><th>GP</th><th>Margin</th></tr></thead><tbody><tr><td>Working option</td><td><input id="buy" type="number" value="${x.buy}" style="width:90px"></td><td><input id="sell" type="number" value="${x.sell}" style="width:90px"></td><td>${money(gp)}</td><td>${margin.toFixed(1)}%</td></tr></tbody></table><div class="recommend"><div><span>Recommended sell</span><strong>${money(x.buy?x.buy/0.78:0)}</strong></div><div><span>Projected GP</span><strong>${money(gp)}</strong></div><div><span>Margin</span><strong>${margin.toFixed(1)}%</strong></div><div><span>Confidence</span><strong>${x.buy?'High':'—'}</strong></div></div></div>
-<div class="section"><div class="section-title">Action</div><div class="actions">${missing.length?'<button class="btn primary" id="requestInfo">Request missing info</button>':'<button class="btn primary" id="sendQuote">Generate & Send Quote</button>'}<button class="btn success" id="markWon">Mark Won</button><button class="btn danger" id="markLost">Mark Lost</button></div></div>`;
-w.querySelectorAll('[data-k]').forEach(inp=>inp.onchange=()=>{x[inp.dataset.k]=inp.type==='number'?+inp.value:inp.value;if(x.origin&&x.destination&&x.weight&&x.dims&&x.status==='missing'){x.status='ready';x.stage='Ready'}save();renderAll()});
-const buy=document.getElementById('buy'),sell=document.getElementById('sell');[buy,sell].forEach(inp=>inp.onchange=()=>{x[inp.id]=+inp.value;if(x.buy&&x.sell&&x.status!=='won'&&x.status!=='lost'){x.status='ready';x.stage='Ready'}save();renderAll()});
-const req=document.getElementById('requestInfo');if(req)req.onclick=()=>alert(`Draft reply:\n\nHi ${x.contact},\n\nThank you for the RFQ. Could you please confirm the cargo dimensions so we can finalize the rate?\n\nThank you.`);
-const send=document.getElementById('sendQuote');if(send)send.onclick=()=>{x.status='sent';x.stage='Sent';save();renderAll();alert(`Quote RFQ-${x.id} prepared at ${money(x.sell)}.`)};
-document.getElementById('markWon').onclick=()=>{x.status='won';x.stage='Won';save();renderAll()};document.getElementById('markLost').onclick=()=>{x.status='lost';x.stage='Lost';save();renderAll()};}
-function renderMetrics(){document.getElementById('mRfq').textContent=rfqs.length;const open=rfqs.filter(x=>!['won','lost'].includes(x.status));document.getElementById('mPipe').textContent=money(open.reduce((a,x)=>a+(x.sell||0),0));document.getElementById('mGp').textContent=money(open.reduce((a,x)=>a+Math.max(0,(x.sell||0)-(x.buy||0)),0));document.getElementById('queueCount').textContent=open.length+' active'}
-function renderPipeline(){const stages=['New','Ready','Sent','Won'];document.getElementById('pipelineBoard').innerHTML=stages.map(s=>`<div class="lane"><h3>${s.toUpperCase()}</h3>${rfqs.filter(x=>x.stage===s).map(x=>`<div class="opp"><strong>${x.customer}</strong><div class="route">${x.origin} → ${x.destination}</div><div class="amount">${money(x.sell)}</div><div class="meta">RFQ-${x.id} · ${x.mode}</div></div>`).join('')||'<div class="meta" style="padding:8px">No opportunities</div>'}</div>`).join('')}
-function renderRates(){document.getElementById('rateRows').innerHTML=rates.map(r=>`<tr><td><strong>${r.lane}</strong></td><td>${r.mode}</td><td>${r.vendor}</td><td>${r.buy}</td><td>${r.sell}</td><td>${r.margin}</td><td>${r.updated}</td></tr>`).join('')}
-function renderAll(){renderMetrics();renderList(document.getElementById('search')?.value||'');renderWorkspace();renderPipeline();renderRates()}
-document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.nav button').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));document.getElementById(b.dataset.view).classList.add('active');renderAll()});
-document.getElementById('search').oninput=e=>renderList(e.target.value);
-document.getElementById('newRfq').onclick=()=>{const id=Math.max(1049,...rfqs.map(x=>x.id))+1;const n={id,customer:'New Customer',contact:'',mode:'Air',origin:'',destination:'',pieces:1,packageType:'Pallets',weight:0,dims:'',commodity:'',ready:'',status:'missing',subject:'New freight quote request',email:'Paste or import the customer RFQ here.',buy:0,sell:0,stage:'New',created:'Just now'};rfqs.unshift(n);selected=id;save();renderAll()};
-document.getElementById('addRate').onclick=()=>{rates.unshift({lane:'New lane',mode:'Air',vendor:'Vendor',buy:'$0.00',sell:'$0.00',margin:'0%',updated:'Today'});save();renderRates()};
-renderAll();
+const demo=`Hi, need best air rate MIA-LIM. 3 pallets, 1,850 kg total. Lighting fixtures. Pickup Doral and deliver airport Lima. Needs to move tomorrow. Please send asap.`;
+const start=document.getElementById('start'),flow=document.getElementById('flow'),text=document.getElementById('rfqText');
+document.getElementById('pasteDemo').onclick=()=>{text.value=demo;text.focus()};
+document.getElementById('analyzeBtn').onclick=analyze;
+text.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key==='Enter')analyze()});
+function analyze(){if(!text.value.trim())text.value=demo;start.style.display='none';flow.classList.add('active');document.getElementById('chips').innerHTML='<span class="chip">Lighting fixtures</span><span class="chip">Pickup: Doral</span><span class="chip">Airport delivery</span><span class="chip">Urgent</span>';showStep(1)}
+function showStep(n){document.querySelectorAll('.step').forEach(s=>s.hidden=true);document.getElementById('step'+n).hidden=false;document.querySelectorAll('.dot').forEach((d,i)=>{d.className='dot'+(i===Math.min(n-1,3)?' active':'')});window.scrollTo({top:0,behavior:'smooth'})}
+function nextStep(n){if(n===3){const d=document.getElementById('dims').value.trim();document.getElementById('finalDims').textContent=d||'48 × 40 × 52 in each'}showStep(n)}
+function adjustPrice(){const v=prompt('Enter customer sell price','3690');if(v&& !isNaN(Number(v.replace(/[$,]/g,'')))){const n=Number(v.replace(/[$,]/g,''));document.getElementById('sellPrice').textContent='$'+n.toLocaleString()}}
+function sendQuote(){showStep(5);try{const history=JSON.parse(localStorage.getItem('pi_guided_quotes')||'[]');history.unshift({customer:'Nova Lighting',route:'MIA → LIM',sell:3690,status:'sent',at:new Date().toISOString()});localStorage.setItem('pi_guided_quotes',JSON.stringify(history.slice(0,50)))}catch(e){}}
+function resetApp(){flow.classList.remove('active');start.style.display='block';text.value='';showStep(1);window.scrollTo({top:0,behavior:'smooth'})}
+const drawer=document.getElementById('drawer');document.getElementById('inboxBtn').onclick=()=>drawer.classList.add('open');document.getElementById('closeDrawer').onclick=()=>drawer.classList.remove('open');
 </script>
 </body>
 </html>
